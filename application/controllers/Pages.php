@@ -7,7 +7,6 @@ class Pages extends CI_Controller {
         }
 
         $data['title'] = ucfirst($page) ;
-
         $this->load->view('templetes/header');
         $this->load->view('pages/'.$page , $data);
         $this->load->view('templetes/footer');

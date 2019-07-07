@@ -1,1 +1,1 @@
-this is home
+<h2> <?php echo $title ;?> </h2>
