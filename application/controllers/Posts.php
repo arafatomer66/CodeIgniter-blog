@@ -35,4 +35,31 @@ class Posts extends CI_Controller {
        
     }
 
+
+    public function create(){
+
+        $data['title'] =  'Product Entry' ;
+          
+        $this->form_validation->set_rules('title' , 'Title' , 'required');
+        $this->form_validation->set_rules('body' , 'Body' , 'required');
+
+        if($this->form_validation->run() === FALSE){
+
+            $this->load->view('templetes/header');
+            $this->load->view('posts/create', $data);
+            $this->load->view('templetes/footer');
+
+        } 
+        else {
+
+            $this->post_model->create_post();
+            // $this->load->view('posts/success');
+
+           redirect('posts');
+        }
+
+       
+
+    }
+
 }
