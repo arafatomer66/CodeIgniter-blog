@@ -11,7 +11,6 @@
 
 <body>
 
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="#">myShop</a>
@@ -28,12 +27,14 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="<?php echo base_url() ?>posts">Posts</a>
+                        <a class="nav-link" href="<?php echo base_url() ?>posts">Products</a>
                     </li>
 
                 </ul>
             </div>
     </nav>
+    <hr>
     </div>
     <br>
+
     <div class="container">
