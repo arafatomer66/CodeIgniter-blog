@@ -1,3 +1,4 @@
+<!-- main product listing  -->
 <h2> <?php echo $title ;?> </h2>
 
 <br>
