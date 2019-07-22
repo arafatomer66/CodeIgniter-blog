@@ -9,4 +9,5 @@
 
 <div class="post-body">
     <?php echo $post['body'] ;?>
+    <!-- <?php echo $post['title'] ;?> -->
 </div>
