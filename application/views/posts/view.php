@@ -1,3 +1,4 @@
+<!-- main product listing  -->
 <h2> <?php echo $title ;?> </h2>
 
 <br>
@@ -8,4 +9,5 @@
 
 <div class="post-body">
     <?php echo $post['body'] ;?>
+    <!-- <?php echo $post['title'] ;?> -->
 </div>
