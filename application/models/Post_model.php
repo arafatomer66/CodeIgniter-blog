@@ -24,15 +24,19 @@ class Post_model extends CI_Model {
 
     public function create_post(){
         $slug =  url_title($this->input->post('title'));
+        $title = $this->input->post('title' );
+        $body =  $this->input->post('body');
 
-        print_r(post['title']);
+        
 
         $data =  array (
-            'title' => $this->input->post['title'],
-            'slug'  => $slug ,
-            'body'  => $this->input->post['body']
-        );
 
+            'title' => $title ,
+            'slug'  => $slug ,
+            'body'  => $body
+
+        );
+       
         return $this->db->insert('posts' , $data);
 
         

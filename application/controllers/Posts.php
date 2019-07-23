@@ -51,11 +51,12 @@ class Posts extends CI_Controller {
 
         } 
         else {
-
+            $this->load->model('Post_model');
+            
             $this->post_model->create_post();
             // $this->load->view('posts/success');
 
-           redirect('posts');
+            redirect('posts');
         }
 
        

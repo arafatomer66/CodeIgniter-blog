@@ -7,8 +7,8 @@
 
 <?php echo form_open('posts/create'); ?>
   <div class="form-group">
-    <label for="title">Enter Product Name</label>
-    <input class="form-control"  name="title">
+    <label >Enter Product Name</label>
+    <input type="text" class="form-control"  name="title">
   </div>
 
   <div class="form-group">
