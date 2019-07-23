@@ -1,6 +1,7 @@
 <?php 
 
 class Posts extends CI_Controller {
+
     public function index(){
      
 
@@ -16,16 +17,12 @@ class Posts extends CI_Controller {
         $this->load->view('templetes/footer');
     }
 
-
-
-
     public function view ($slug = NULL){
         $data['post'] = $this->post_model->get_posts($slug);
 
         if(empty($data['post']) ){
             show_404();
         }
-
 
         $data['title'] =  $data['post']['title'];
 
@@ -34,7 +31,6 @@ class Posts extends CI_Controller {
         $this->load->view('templetes/footer');
        
     }
-
 
     public function create(){
 
@@ -55,12 +51,18 @@ class Posts extends CI_Controller {
             
             $this->post_model->create_post();
             // $this->load->view('posts/success');
-
+             
             redirect('posts');
         }
 
-       
+    }
 
+    public function delete($id){
+
+        echo $id ;
+        // $this->post_model->delete_post($id);
+        // redirect('posts');
+    
     }
 
 }

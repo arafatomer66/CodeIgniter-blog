@@ -7,7 +7,6 @@ class Post_model extends CI_Model {
 
     }
 
-
     public function get_posts($slug = False){
 
         if($slug === False){
@@ -21,8 +20,9 @@ class Post_model extends CI_Model {
         
     }
 
-
     public function create_post(){
+
+         
         $slug =  url_title($this->input->post('title'));
         $title = $this->input->post('title' );
         $body =  $this->input->post('body');
@@ -40,6 +40,15 @@ class Post_model extends CI_Model {
         return $this->db->insert('posts' , $data);
 
         
+    }
+
+    public function delete_post($id){
+
+
+        $this->db->where('id' , $id);
+        $this->db->delete('posts');
+      
+        return true ;
     }
 
 }
